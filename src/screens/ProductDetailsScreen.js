@@ -1,5 +1,4 @@
 import {
-  Dimensions,
   FlatList,
   Image,
   Pressable,
@@ -7,7 +6,6 @@ import {
   StyleSheet,
   Text,
   View,
-  useWindowDimensions,
 } from "react-native";
 import React from "react";
 import products from "../data/products";
