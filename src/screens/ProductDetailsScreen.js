@@ -10,12 +10,14 @@ import {
 import React from "react";
 import products from "../data/products";
 import { normalize, screen_width } from "../utils/functions";
+import { useSelector } from "react-redux";
 
 const ProductDetailsScreen = () => {
+  const product = useSelector((state) => state.products.selectedProduct);
   const addToCart = () => {
     console.warn("Add to cart !!!");
   };
-  const product = products[0];
+
   return (
     <View>
       <ScrollView style={{}}>
