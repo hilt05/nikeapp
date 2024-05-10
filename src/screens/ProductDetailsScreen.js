@@ -10,12 +10,14 @@ import {
 import React from "react";
 import products from "../data/products";
 import { normalize, screen_width } from "../utils/functions";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { cartSlice } from "../store/cartSlice";
 
 const ProductDetailsScreen = () => {
+  const dispatch = useDispatch();
   const product = useSelector((state) => state.products.selectedProduct);
   const addToCart = () => {
-    console.warn("Add to cart !!!");
+    dispatch(cartSlice.actions.addCartItem({ product }));
   };
 
   return (
